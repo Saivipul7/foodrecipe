@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuro-fridge 🧠</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">🍴 Neuro-fridge</div>
+    <h3>Leftover food isn’t dead — it’s ready to be reborn on your plate</h3>
+    <nav>
+      <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
+        <li><a href="share.html">Share</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="cooking.mp4" type="video/mp4">
+    </video>
+
+    <!-- Overlay Content -->
+    <div class="hero-content">
+      <h1>Discover dishes hiding in your kitchen</h1>
+      <p>Enter your ingredients, discover recipes, unlock the chef inside you!</p>
+      <div class="search-box">
+        <input type="text" id="ingredientInput" placeholder="e.g., tomato, onion, rice">
+        <button onclick="searchRecipes()">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipes Result Section -->
+  <section class="recipes" id="recipes">
+    <h2>Suggested Recipes</h2>
+    <div class="recipe-list" id="recipeList">
+      <!-- Recipes will be added here by JS -->
+    </div>
+  </section>
+
+  <!-- Share Recipe Section -->
+  <section class="share" id="share">
+    <h2>Share Your Creation 🍲</h2>
+    <p>Upload a picture of how you made it!</p>
+    <input type="file" id="uploadImage" accept="image/*">
+    <button onclick="shareRecipe()">Upload</button>
+    <div id="preview"></div>
+  </section>
+
+  <div class="search-box">
+  <input type="text" id="ingredientInput" placeholder="e.g., tomato, onion, rice">
+  <button onclick="searchRecipes()">Search</button>
+</div>
+
+
+  <footer>
+    <p>© 2025 Recipe Guide | Made with ❤️</p>
+  </footer>
+
+ <script>
+  function searchRecipes() {
+    const input = document.getElementById('ingredientInput').value.toLowerCase().trim();
+
+    if (input.includes('recipe with left over rice') || input.includes('recipe with leftoverrice')||input.includes('left over rice recipe')) {
+      window.location.href = 'recipe1.html';
+    }
+    else if (input.includes('recipewithleftoverroti') || input.includes('recipe with left over roti') || input.includes('left over roti recipe')){
+      window.location.href = 'recipe2.html';
+    }
+    else if (input.includes('recipe with left over dal') || input.includes('left over dal recipe')){
+      window.location.href ='recipe3.html';
+    }
+    else if (input.includes('recipe with left over curry') || input.includes("recipewithleftovercurry")){
+      window.location.href ='recipe4.html';
+    }
+
+    else {
+      alert('No recipe found for: ' + input);
+    }
+  }
+</script>
+
+</body>
+</html>

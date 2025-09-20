@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Neuro-Fridge</title>
+  <style>
+    /* Full page setup */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('signuppic.png') no-repeat center center/cover;
+    }
+
+    /* Signup container */
+    .signup-container {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .signup-container h1 {
+      margin-bottom: 30px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .input-group input[type="text"],
+    .input-group input[type="password"],
+    .input-group input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .input-group input::placeholder {
+      color: #eee;
+    }
+
+    .input-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button#signup-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ff7f50;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button#signup-btn:hover {
+      background-color: #ff6333;
+    }
+
+    .login-text {
+      text-align: center;
+      margin-top: 20px;
+      color: #ff0f0f;
+    }
+
+    .login-text a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    .login-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Signup</h1>
+    <form>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <input type="checkbox" id="show-pass"> <label for="show-pass">Show Password</label>
+      </div>
+
+      <button type="submit" id="signup-btn">Signup</button>
+
+      <p class="login-text">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    const showPass = document.getElementById('show-pass');
+    const passwordInput = document.getElementById('password');
+
+    showPass.addEventListener('change', () => {
+      passwordInput.type = showPass.checked ? 'text' : 'password';
+    });
+  </script>
+</body>
+</html>

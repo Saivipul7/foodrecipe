@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Your Recipe</title>
+  <link rel="stylesheet" href="share.css">
+</head>
+<body>
+  <!-- Header -->
+   <header>
+    <div class="logo">🍴 Neuro-Fridge</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
+        <li><a href="share.html">Share</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Share Page Content -->
+  <section class="share-section">
+    <h1>Share Your Recipe 🍲</h1>
+    <p>Have a creative idea with leftover food? Share it with others!</p>
+    
+    <form class="share-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="recipe">Recipe Title:</label>
+      <input type="text" id="recipe" name="recipe" placeholder="Enter recipe name" required>
+
+      <label for="ingredients">Ingredients:</label>
+      <textarea id="ingredients" name="ingredients" placeholder="List the ingredients..." rows="4" required></textarea>
+
+      <label for="steps">Steps:</label>
+      <textarea id="steps" name="steps" placeholder="Explain how to make it..." rows="6" required></textarea>
+
+      <label for="image">Upload a Photo:</label>
+      <input type="file" id="image" name="image" accept="image/*">
+
+      <button type="submit">Submit Recipe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Leftover Food Recipes | Made with ❤️</p>
+  </footer>
+</body>
+</html>
